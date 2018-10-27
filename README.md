@@ -1,5 +1,4 @@
-# word-rnn-tensorflow 
-# Optimized for song lyrics
+# word-rnn-tensorflow optimized for song lyrics from Genius.com
 
 Multi-layer Recurrent Neural Networks (LSTM, RNN) for word-level language models in Python using TensorFlow.
 This setup is based on language modeling for music lyrics, taken from https://genius.com from the artists selected in scrape.py.
