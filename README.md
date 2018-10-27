@@ -36,12 +36,15 @@ to get lyrics from all songs on the Genius website for the specified artists. Ma
 ```
 artist = api.search_artist(artist_name, max_songs=200)
 ```
+Note: This implementation is still buggy, and occasionally will timeout for reasons still being worked out. If so, simply running the script again (and removing the artists that were already pulled from to reduce repetition) will fix.
+
 Now, all lyrics should be in the data/input.txt file.
 
 To train with default parameters on the rap-lyrics corpus, run:
 ```bash
 python3 train.py
 ```
+Note: depending on the size of your dataset, this process will likely take a significant amount of time.
 
 To sample from a trained model
 ```bash
@@ -52,5 +55,5 @@ To pick using beam search, use the `--pick` parameter. Beam search can be
 further customized using the `--width` parameter, which sets the number of beams
 to search with. For example:
 ```bash
-python sample.py --pick 2 --width 4
+python3 sample.py --pick 2 --width 4
 ```
