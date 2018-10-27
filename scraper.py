@@ -5,7 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 import os
 
-GENIUS_API_KEY = 'RrG6yrDpUQxsg2Dj5M2TUFIGwarApfQWZrIN8Cx3cc-iZusRG9WTGlmRr-v3I6Lv'
+GENIUS_API_KEY = ''
 api = genius.Genius(GENIUS_API_KEY)
 base_url = 'http://api.genius.com'
 headers = {
@@ -89,9 +89,6 @@ headers = {
         'Juice WRLD',
         'MadeinTYO',
 
-        ERRORS WITH:
-        'A Boogie Wit Da Hoodie',
-        'Ski Mask the Slump God',
         """
 # list of artists to scrape from
 artists = [
@@ -130,23 +127,6 @@ if __name__ == "__main__":
             artist.add_song(song)
             print(song)
 
-        with open ('lyrics/input-new-scraper.txt', 'a') as file:
+        with open ('data/input.txt', 'a') as file:
             file.write(artist.save_lyrics('txt'))
             file.close()
-'''
-        search_url = base_url + '/search?q=%s' % artist_name
-        print 'Base URL: %s' % (search_url)
-        print 'headers %s' % (headers)
-
-         #send the request
-        response = requests.get(search_url, headers=headers)
-        json = response.json()
-
-        #print "JSON %s" % (json)
-
-        song_info = None
-
-        for hit in json['response']['hits']:
-            print hit['result']['api_path']
-            get_lyrics(hit['result']['api_path'])
-'''
