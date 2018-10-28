@@ -8,14 +8,9 @@ Mostly reused code from https://github.com/hunkim/word-rnn-tensorflow which was 
 Also built using the Genius lyrics scraping interface from https://github.com/johnwmillr/LyricsGenius
 
 # Requirements
-- Tensorflow, install via pip:
-```bash 
-pip3 install tensorflow
-```
-- Currently optimized for Python 3.6
-- Lyricsgenius package, install via pip:
+Install required `pip` packages with
 ```bash
-pip3 install lyricsgenius
+pip3 install -r requirements.txt
 ```
 
 # Basic Usage
