@@ -35,7 +35,7 @@ Note: This implementation is still buggy, and occasionally will timeout for reas
 
 Now, all lyrics should be in the data/input.txt file.
 
-To train with default parameters on the rap-lyrics corpus, run:
+To train with default parameters on the 'data/lyrics' corpus, run:
 ```bash
 python3 train.py
 ```

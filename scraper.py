@@ -49,6 +49,6 @@ if __name__ == "__main__":
             artist.add_song(song)
             print(song)
 
-        with open ('data/input.txt', 'a') as file:
+        with open ('data/lyrics/input.txt', 'a') as file:
             file.write(artist.save_lyrics('txt'))
             file.close()
